@@ -1,5 +1,6 @@
 import com.yanbin.reactivestickynote.build.Dependencies
 import com.yanbin.reactivestickynote.build.Version
+
 plugins {
     id("com.android.application")
     id("kotlin-android")
@@ -7,8 +8,10 @@ plugins {
 }
 
 android {
-    compileSdkVersion(Version.Android.compileSdk)
-    buildToolsVersion(Version.Android.buildTool)
+    //compileSdkVersion Deprecated "Replaced by compileSdk"
+    compileSdk Version.Android.compileSdk
+    //  buildToolsVersion Deprecated
+    buildToolsVersion Version.Android.buildTool
 
     defaultConfig {
         applicationId = "com.yanbin.reactivestickynote"
@@ -24,27 +27,39 @@ android {
 
     buildTypes {
         release {
-            isMinifyEnabled = false
+            //groovy
+            minifyEnabled false
+//            //ktx(kotlin)
+//            isMinifyEnabled = false
             proguardFiles(
-                getDefaultProguardFile("proguard-android-optimize.txt"),
-                "proguard-rules.pro"
+                    getDefaultProguardFile("proguard-android-optimize.txt"),
+                    "proguard-rules.pro"
             )
         }
     }
+
     compileOptions {
-        isCoreLibraryDesugaringEnabled = true
+        // Flag to enable support for the new language APIs
+        //groovy
+        coreLibraryDesugaringEnabled true
+//        //ktx(kotlin)
+//        isCoreLibraryDesugaringEnabled = true
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
+
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = JavaVersion.VERSION_1_8.toString()
         useIR = true
     }
 
-    buildFeatures.compose = true
+    buildFeatures {
+        compose = true
+    }
 
     composeOptions {
         kotlinCompilerExtensionVersion = Version.compose
+        //WARNING :  ComposeOptions.kotlinCompilerVersion is deprecated. Compose now uses the kotlin compiler defined in your buildscript.
         kotlinCompilerVersion = Version.kotlin
     }
 }
@@ -68,7 +83,7 @@ dependencies {
     // Firebase
     implementation(platform(Dependencies.Firebase.bom))
     implementation (Dependencies.Firebase.firestore)
-
+    //https://developer.android.com/studio/write/java8-support
     coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:1.1.5")
 
     implementation(Dependencies.Android.lifecycleKts)

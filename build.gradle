@@ -1,0 +1,20 @@
+import com.yanbin.reactivestickynote.build.Version
+
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+        mavenLocal()
+        gradlePluginPortal()
+    }
+
+    dependencies {
+        classpath("com.android.tools.build:gradle:$Version.agp")
+        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:$Version.kotlin")
+        classpath("com.google.gms:google-services:4.3.8")
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
