@@ -1,5 +1,3 @@
-import com.yanbin.reactivestickynote.build.Dependencies
-import com.yanbin.reactivestickynote.build.Version
 plugins {
     id("com.android.application")
     id("kotlin-android")
