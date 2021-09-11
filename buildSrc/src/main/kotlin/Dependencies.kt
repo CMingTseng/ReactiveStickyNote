@@ -1,3 +1,5 @@
+//FIXME!! Ref : https://github.com/gradle/gradle/issues/9251
+package com.yanbin.reactivestickynote.build
 object Dependencies {
     object Android {
         const val coreKtx = "androidx.core:core-ktx:1.5.0"
