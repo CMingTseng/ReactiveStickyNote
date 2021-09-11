@@ -10,7 +10,7 @@ buildscript {
     dependencies {
         classpath("com.google.gms:google-services:4.3.8")
         classpath("com.android.tools.build:gradle:7.1.0-alpha05")
-        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:${com.yanbin.reactivestickynote.build.Version.kotlin}")
+        classpath(kotlin("gradle-plugin", ${com.yanbin.reactivestickynote.build.Version.kotlin}))
     }
 }
 
