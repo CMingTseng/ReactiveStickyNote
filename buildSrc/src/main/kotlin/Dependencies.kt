@@ -45,6 +45,8 @@ object Version {
     const val jUnit5 = "5.3.1"
     const val compose = "1.0.1"
     const val koin = "3.0.2"
+    const val compose = "1.0.1"
+    const val koin = "3.0.2"
 
     object Android {
         const val buildTool = "30.0.3"
