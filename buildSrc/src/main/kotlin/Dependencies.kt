@@ -39,6 +39,7 @@ object Dependencies {
 }
 
 object Version {
+    const val agp = "7.1.0-alpha05"
     //FIXME compose 1.0.0 <--> kotlin 1.5.10  &  compose 1.0.1 <--> kotlin 1.5.21
     const val kotlin = "1.5.21"
     const val jUnit5 = "5.3.1"
