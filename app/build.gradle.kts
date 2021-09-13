@@ -48,27 +48,27 @@ android {
 }
 
 dependencies {
-    implementation(Dependencies.Android.coreKtx)
-    implementation(Dependencies.Android.appCompat)
-    implementation(Dependencies.Android.material)
+    implementation(Deps.Android.coreKtx)
+    implementation(Deps.Android.appCompat)
+    implementation(Deps.Android.material)
     // Compose
-    implementation(Dependencies.Android.composeUI)
-    implementation(Dependencies.Android.composeMaterial)
-    implementation(Dependencies.Android.composeUITooling)
-    implementation(Dependencies.Android.rxJava3)
-    implementation(Dependencies.Android.navigation)
+    implementation(Deps.Android.composeUI)
+    implementation(Deps.Android.composeMaterial)
+    implementation(Deps.Android.composeUITooling)
+    implementation(Deps.Android.rxJava3)
+    implementation(Deps.Android.navigation)
     // Koin
-    implementation(Dependencies.Koin.android)
+    implementation(Deps.Koin.android)
     // RxJava
-    implementation(Dependencies.RxJava.rxJava)
-    implementation(Dependencies.RxJava.rxAndroid)
-    implementation(Dependencies.RxJava.rxKotlin)
+    implementation(Deps.RxJava.rxJava)
+    implementation(Deps.RxJava.rxAndroid)
+    implementation(Deps.RxJava.rxKotlin)
     // Firebase
-    implementation(platform(Dependencies.Firebase.bom))
-    implementation (Dependencies.Firebase.firestore)
+    implementation(platform(Deps.Firebase.bom))
+    implementation (Deps.Firebase.firestore)
 
     coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:1.1.5")
 
-    implementation(Dependencies.Android.lifecycleKts)
-    implementation(Dependencies.Android.composeActivity)
+    implementation(Deps.Android.lifecycleKts)
+    implementation(Deps.Android.composeActivity)
 }
