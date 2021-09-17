@@ -1,7 +1,7 @@
 object Deps {
     object Android {
-        const val coreKtx = "androidx.core:core-ktx:1.5.0"
-        const val appCompat = "androidx.appcompat:appcompat:1.3.0"
+        const val coreKtx = "androidx.core:core-ktx:1.6.0"
+        const val appCompat = "androidx.appcompat:appcompat:1.3.1"
         const val material = "com.google.android.material:material:1.3.0"
 
         const val composeUI = "androidx.compose.ui:ui:${Version.compose}"
@@ -47,7 +47,7 @@ object Version {
     const val logback = "1.2.3"
 
     object Android {
-        const val buildTool = "30.0.3"
+        const val buildTool = "31.0.0"
         const val minSdk = 23
         const val targetSdk = 30
         const val compileSdk = 30
