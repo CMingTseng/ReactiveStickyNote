@@ -38,10 +38,10 @@ object Deps {
 
 object Version {
     const val agp = "7.0.1"
-    //FIXME compose 1.0.0 <--> kotlin 1.5.10  &  compose 1.0.1 <--> kotlin 1.5.21
+    //FIXME compose 1.0.0 <--> kotlin 1.5.10  &  compose 1.0.1/1.0.2 <--> kotlin 1.5.21  &  compose 1.0.3 <--> kotlin 1.5.30
     const val kotlin = "1.5.30"
     const val jUnit5 = "5.3.1"
-    const val compose = "1.0.1"
+    const val compose = "1.0.3"
     const val koin = "3.0.2"
     const val ktor = "1.6.0"
     const val logback = "1.2.3"
